@@ -1,0 +1,145 @@
+/* Intro page css*/
+
+#introbody{
+    background-image:linear-gradient(to right, #fbac46,#df4a33); 
+    min-height: 650px;
+    overflow: hidden;
+}
+.centerbox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+.centerbox > .row{
+    height: 250px;
+    background-color: white;
+}
+#Layer_1{
+    cursor: pointer;
+}
+#Layer_1:hover > #flag{
+    animation: flag 1.5s ;
+}
+#Layer_1:hover > #star{
+    animation: flag 1.5s ;
+    animation-delay: 0.2s;
+}
+.heart{
+    position: absolute;
+    background-color: transparent;
+    transition: 5s ease-in-out;
+}
+.heart-sm{
+    width: 35px;
+    height: 35px;
+}
+.heart-md{
+    width: 55px;
+    height: 55px;
+}
+.heart-lg{
+    width: 80px;
+    height: 80px;
+}
+.heart-xl{
+    width: 100px;
+    height: 100px;
+}
+.hgruop{
+    animation: moveheart  5s linear infinite;
+   
+
+}
+.hgruop1{
+    animation: moveheart1  7s linear infinite;
+
+
+}
+.hgruop2{
+    animation: moveheart2  9s linear infinite;
+;
+
+}
+.hgruop3{
+    animation: moveheart3  3s linear infinite;
+ 
+
+}
+@keyframes flag{
+    0% {transform: translateY(35%);}
+    100% {transform: translateY(0);}
+}
+@keyframes moveheart{
+    0% {bottom: 0;}
+    100% {bottom: 100%; transform: rotate(1turn); transition:transform 9s;}
+}
+@keyframes moveheart1{
+    0%{bottom: -100%;}
+    30% {bottom: -100%;}
+    100% {bottom: 100%; transform: rotate(3turn);  transition:transform 18s; }
+}
+@keyframes moveheart2{
+    0% {bottom: -75%;}
+    30% {bottom: 15%;}
+    100% {bottom: 100%; transform: rotate(3turn); transition:transform 15s;}
+}
+@keyframes moveheart3{
+    0% {bottom: -50%;}
+    100% {bottom: 100%; transform: rotate(3turn); transition:transform 12s;}
+}
+@media screen and (max-width : 768px){
+    .intro-logo {
+        width: 80%;
+        margin-top: 35px;
+        padding-left: inherit;
+    }
+}
+
+/* end css intro page*/
+/* */
+/*css home page*/
+.header{
+    background-image:linear-gradient(to right, #fbac46,#df4a33); 
+}
+.header-logo{
+    max-height: 200px;
+}
+.main-content{
+    margin-top: 30px;
+}
+nav{
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+}
+.post-img> img:hover{
+    
+    opacity: 0.5;
+}
+article:hover{
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+}
+/* end css home page */
+/*css loading */
+#loader{
+    width: 100%;
+    height: 650px;
+    background-color: white;
+}
+.loader{
+    width: 100px;
+    height: 100px;
+    border: 15px solid snow;
+    border-top: 15px solid #df4a33;
+    border-radius: 50%;
+    z-index: 10;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
